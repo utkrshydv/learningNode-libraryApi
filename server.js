@@ -1,22 +1,30 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const bodyParser = require('body-parser');
-const db = require('./db');
 require('dotenv').config();
+const db = require('./db');
 
 app.use(express.json());
 
+let isReady = false;
+
+const PORT = process.env.PORT || 3000;
+
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname,'public','home.html')); 
+  if (!isReady) {
+    return res.send('Waking up... Please wait.');
+  }
+  res.sendFile(path.join(__dirname, 'public', 'home.html'));
 });
 
-const bookRoutes = require('./routes/bookRoutes');
+// Wait for DB connection before enabling routes and starting server
+db.on('connected', () => {
+  isReady = true;
 
-app.use('/book', bookRoutes);
+  const bookRoutes = require('./routes/bookRoutes');
+  app.use('/book', bookRoutes);
 
-const PORT = process.env.PORT || 3000
-
-app.listen(PORT, () => {
-  console.log('Listening to 3000')
-})
+  app.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`);
+  });
+});
