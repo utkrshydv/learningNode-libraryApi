@@ -1,5 +1,4 @@
 
-````markdown
 # 📘 Book Library API
 
 A simple RESTful API for managing a book library, built with Node.js, Express, and MongoDB (Mongoose).  
@@ -18,15 +17,14 @@ You can access the deployed API here (hosted on Render free tier):
 
 ## 📋 Features
 
-- Fetch all books
-- Fetch books by ISBN, genre, or rating
-- Search books by partial title
-- Add new books
-- Update existing books by ISBN
-- Delete books by ISBN
+- Fetch all books  
+- Fetch books by ISBN, genre, or rating  
+- Search books by partial title  
+- Add new books  
+- Update existing books by ISBN  
+- Delete books by ISBN  
 
 ---
-
 
 ## 🛣️ API Routes
 
@@ -44,12 +42,12 @@ You can access the deployed API here (hosted on Render free tier):
 
 ### POST Request
 
-* Add a new book
+Add a new book:
 
-```
+```http
 POST /book
 Content-Type: application/json
-```
+````
 
 Example JSON body:
 
@@ -68,9 +66,9 @@ Example JSON body:
 
 ### PUT Request
 
-* Update a book by ISBN
+Update a book by ISBN:
 
-```
+```http
 PUT /book/isbn/:isbn
 Content-Type: application/json
 ```
@@ -81,9 +79,9 @@ Send only the fields you want to update.
 
 ### DELETE Request
 
-* Delete a book by ISBN
+Delete a book by ISBN:
 
-```
+```http
 DELETE /book/isbn/:isbn
 ```
 
@@ -120,20 +118,15 @@ If you plan to use it heavily or in production, consider upgrading to a paid pla
 
 ## 🎓 What I Learned
 
-- How to build a RESTful API using **Node.js** and **Express**.
-- Connecting and interacting with **MongoDB** using **Mongoose**.
-- Organizing routes in separate files for clean code structure.
-- Handling asynchronous database connection events and starting the server only after DB is connected.
-- Deploying a full-stack API to the **Render** free tier and handling cold start issues.
-- Writing clear API documentation with examples for easier usage and testing.
-- Understanding common HTTP methods: GET, POST, PUT, DELETE, and working with JSON payloads.
-- Basics of environment variables for configuration and security.
-- How free hosting plans impact API responsiveness and best practices to mitigate issues.
+* How to build a RESTful API using **Node.js** and **Express**.
+* Connecting and interacting with **MongoDB** using **Mongoose**.
+* Organizing routes in separate files for clean code structure.
+* Handling asynchronous database connection events and starting the server only after DB is connected.
+* Deploying a full-stack API to the **Render** free tier and handling cold start issues.
+* Writing clear API documentation with examples for easier usage and testing.
+* Understanding common HTTP methods: GET, POST, PUT, DELETE, and working with JSON payloads.
+* Basics of environment variables for configuration and security.
+* How free hosting plans impact API responsiveness and best practices to mitigate issues.
 
 ---
-
-
-
-
-
 
