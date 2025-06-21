@@ -81,6 +81,19 @@
     li {
       margin-bottom: 8px;
     }
+
+    a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+    }
+
+    a:hover {
+    color: #0c47a1;
+    text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
@@ -95,14 +108,39 @@
     <p>Welcome to the Book Library API! Below are the available routes and how to use them.</p>
   </div>
 
-  <div class="section">
-    <h2>🔍 GET Requests</h2>
-    <div class="route"><strong>GET</strong> <code>https://utkrshydv-libraryapi.onrender.com/book</code> – Fetch all books</div>
-    <div class="route"><strong>GET</strong> <code>https://utkrshydv-libraryapi.onrender.com/book/isbn/:isbn</code> – Fetch a book by its ISBN <br/> Example: <code>https://utkrshydv-libraryapi.onrender.com/book/isbn/9780345472328</code></div>
-    <div class="route"><strong>GET</strong> <code>https://utkrshydv-libraryapi.onrender.com/book/genre/:genre</code> – Fetch books by genre <br/> Example: <code>https://utkrshydv-libraryapi.onrender.com/book/genre/fiction</code></div>
-    <div class="route"><strong>GET</strong> <code>https://utkrshydv-libraryapi.onrender.com/book/rating/:rating</code> – Fetch books with rating ≥ given value <br/> Example: <code>https://utkrshydv-libraryapi.onrender.com/book/rating/3</code></div>
-    <div class="route"><strong>GET</strong> <code>https://utkrshydv-libraryapi.onrender.com/book/search/:search</code> – Search books by partial title <br/> Example: <code>https://utkrshydv-libraryapi.onrender.com/book/search/harry potter</code></div>
+<div class="section">
+  <h2>🔍 GET Requests</h2>
+  <div class="route"><strong>GET</strong> <a href="https://utkrshydv-libraryapi.onrender.com/book" target="_blank"><code>https://utkrshydv-libraryapi.onrender.com/book</code></a> – Fetch all books</div>
+
+  <div class="route">
+    <strong>GET</strong> <code>https://utkrshydv-libraryapi.onrender.com/book/isbn/:isbn</code> – Fetch a book by its ISBN <br/>
+    Example: <a href="https://utkrshydv-libraryapi.onrender.com/book/isbn/9781439112908" target="_blank">
+      <code>https://utkrshydv-libraryapi.onrender.com/book/isbn/9781439112908</code>
+    </a>
   </div>
+
+  <div class="route">
+    <strong>GET</strong> <code>https://utkrshydv-libraryapi.onrender.com/book/genre/:genre</code> – Fetch books by genre <br/>
+    Example: <a href="https://utkrshydv-libraryapi.onrender.com/book/genre/fiction" target="_blank">
+      <code>https://utkrshydv-libraryapi.onrender.com/book/genre/fiction</code>
+    </a>
+  </div>
+
+  <div class="route">
+    <strong>GET</strong> <code>https://utkrshydv-libraryapi.onrender.com/book/rating/:rating</code> – Fetch books with rating ≥ given value <br/>
+    Example: <a href="https://utkrshydv-libraryapi.onrender.com/book/rating/3" target="_blank">
+      <code>https://utkrshydv-libraryapi.onrender.com/book/rating/3</code>
+    </a>
+  </div>
+
+  <div class="route">
+    <strong>GET</strong> <code>https://utkrshydv-libraryapi.onrender.com/book/search/:search</code> – Search books by partial title <br/>
+    Example: <a href="https://utkrshydv-libraryapi.onrender.com/book/search/harry%20potter" target="_blank">
+      <code>https://utkrshydv-libraryapi.onrender.com/book/search/harry potter</code>
+    </a>
+  </div>
+</div>
+
 
   <div class="section">
     <h2>➕ POST Request</h2>
